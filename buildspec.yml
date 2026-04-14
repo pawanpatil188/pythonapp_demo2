@@ -3,13 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing dependencies...
+      - echo Installing...
 
   build:
     commands:
-      - echo Build started...
-      - echo Nothing to build for static site
+      - echo Zipping Lambda code...
+      - zip -r function.zip .
 
 artifacts:
   files:
-    - '**/*'
+    - function.zip
