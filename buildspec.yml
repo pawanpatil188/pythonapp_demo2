@@ -3,8 +3,10 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Creating clean ZIP...
-      - zip -r function.zip lambda_function.py
+      - echo "Cleaning old zip"
+      - rm -f function.zip
+      - echo "Creating fresh zip"
+      - zip function.zip lambda_function.py
 
 artifacts:
   files:
